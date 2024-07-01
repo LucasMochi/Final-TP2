@@ -11,7 +11,7 @@ class Sonda {
         return this.sondas
     };
 
-    getById = async () => {
+    getById = async (id) => {
         return sondas.filter(ele => ele.id === id);
     };
 }
