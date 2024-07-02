@@ -4,19 +4,19 @@ const sonda = new Sonda();
 
 class Service {
 
-    addSonda = (id, temperatura) => {
-        const sonda = { id, temperatura };
-        validateSonda(sonda);
-        return sonda.add(sonda);
+    addSonda = async (dataSonda) => {
+        validateId(dataSonda.id);
+        validateSonda(dataSonda.temperatura);
+        return await sonda.add(dataSonda);
     };
     
-    getAllSondas = () => {
-        return sonda.getAll();
+    getAllSondas = async () => {
+        return await sonda.getAll();
     };
     
-    getSondaById = (id) => {
+    getSondaById = async (id) => {
         validateId(id);
-        return sonda.getById(id);
+        return await sonda.getById(id);
     };
 };
 
