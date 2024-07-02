@@ -12,7 +12,7 @@ class Sonda {
     };
 
     getById = async (id) => {
-        return sondas.filter(ele => ele.id === id);
+        return this.sondas.filter(ele => ele.id === id);
     };
 }
 
